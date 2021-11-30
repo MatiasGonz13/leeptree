@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body style="background-color: rgb(0, 155, 52);">
+    <h1>Ingresar nueva lista</h1>
+    <form method="POST" action="/">
+      <p>Ingrese una nueva actividad o recordatorio con la forma 'nombre de checklist - ramo'</p>
+      <p>Ejemplo: Tarea 6 - FIS110</p>
+        <p><input type='text' name='nuevalista' placeholder="Ingrese nueva lista"><p>
+          <p>Seleccione una categoría para la lista:</p>
+        <p>Una actividad evaluada se refiere a cualquier entrega evaluada</p>
+        <p>Un recordatorio se refiere a una actividad personal que se debe hacer</p>
+        <p><input type='checkbox' name='seleccion' value="1">Una actividad evaluada</p>
+        <p><input type='checkbox' name='seleccion' value="2">Un recordatorio</p>
+    <input type="submit" title='send'>
+     <h1>Tus Listas</h1>
+     <p>Aqui debo añadir las listas conectadas a firebase</p>
+
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+      import { getApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js"
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAVknh6QnHUA_BBn0cxRK1GtPDr27zq8Ok",
+        authDomain: "leep-tree.firebaseapp.com",
+        databaseURL: "https://leep-tree-default-rtdb.firebaseio.com",
+        projectId: "leep-tree",
+        storageBucket: "leep-tree.appspot.com",
+        messagingSenderId: "362998079091",
+        appId: "1:362998079091:web:d63641444a02e3e4dc9406",
+        measurementId: "G-YKC4YE6F29"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
+<script src='app\database\main.py'></script>
+
+</body>
+</html>
